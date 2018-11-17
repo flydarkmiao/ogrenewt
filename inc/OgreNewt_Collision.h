@@ -1,4 +1,4 @@
-/* 
+/*
     OgreNewt Library
 
     Ogre implementation of Newton Game Dynamics SDK
@@ -132,7 +132,7 @@ public:
     /*!
        if a collision is marked as a trigger-volume, there's no calculation of contacts, so
        this acts like an accurate aabb test
-    */    
+    */
     void setAsTriggerVolume(bool trigger) { NewtonCollisionSetAsTriggerVolume(m_col, (int)trigger); }
 };
 
@@ -141,8 +141,8 @@ public:
 typedef Collision* CollisionPtr;
 typedef ConvexCollision* ConvexCollisionPtr;
 #else
-typedef boost::shared_ptr<Collision> CollisionPtr;
-typedef boost::shared_ptr<ConvexCollision> ConvexCollisionPtr;
+typedef std::shared_ptr<Collision> CollisionPtr;
+typedef std::shared_ptr<ConvexCollision> ConvexCollisionPtr;
 #endif
 
 
